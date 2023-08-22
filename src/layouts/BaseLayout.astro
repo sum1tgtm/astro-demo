@@ -1,0 +1,23 @@
+---
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} - Astro Page</title>
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.svg" />
+  </head>
+  <body
+    class="bg-bgColor-shade1 text-slate-800 antialiased container mx-auto min-h-screen relative"
+  >
+    <Navbar />
+    <slot class="mt-20" />
+    <Footer />
+  </body>
+</html>
